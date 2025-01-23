@@ -26,3 +26,22 @@ function operate(n1, operator, n2) {
     else if (operator === 'x') return multiply(n1, n2);
     else if (operator === '/') return divide(n1, n2);
 }
+
+// Fetch all buttons
+const buttons = document.querySelectorAll('.button');
+// Add event listener for clicks on each button
+buttons.forEach(button => button.addEventListener('click', () => {
+    let clickedNumber = +button.textContent;
+    console.log(button);
+    setDisplay(clickedNumber);
+}));
+
+
+// Get element that contains the display value
+const displayNumber = document.querySelector('.display-result');
+let currentDisplayNumber = 0;
+
+function setDisplay(n1) {
+    displayNumber.textContent = n1;
+    currentDisplayNumber = n1;
+}
