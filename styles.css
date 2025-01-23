@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -9,21 +10,21 @@ body {
     padding: 0;
     height: 100vh;
     width: 100%;
-    background-color: #222222;
+    background-color: rgb(255, 253, 126);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Funnel Display', sans-serif;
+    font-family: 'Funnel Display', 'Rubik', sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(34, 34, 34);
 }
 
 a:hover {
-    color: yellow;
+    color: rgb(255 148 0);
     transition: 0.5s ease-in-out;
 }
 
@@ -37,14 +38,68 @@ a:hover {
 .calculator-body {
     display: flex;
     flex-direction: column;
-    background-color: #3c3c3c;
-    height: 490px;
-    width: 375px;
+    background-color: rgb(60, 60, 60);
+    height: 450px;
+    width: 325px;
     border-radius: 15px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Rubik', 'Funnel Display', sans-serif;
 }
 
-.calculator-display {}
+.calculator-display {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(106, 109, 109);
+    margin: 28px;
+    border-radius: 15px;
+    padding: 32px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calculator-buttons {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    padding: 32px;
+    padding-top: 0;
+    font-weight: 500;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(229, 229, 229);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calculator-clear {
+    background-color: rgba(255, 0, 0, 0.782);
+    /*background-color: rgb(255 148 0);*/
+    color: white;
+}
+
+.calculator-submit {
+    background-color: rgba(0, 128, 0, 0.811);
+    color: white;
+}
+
+.calculator-result {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
 
 .footer {
     display: flex;
@@ -52,7 +107,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: 16px;
-    color: white;
+    color: #222222;
     font-size: 18px;
     font-weight: 300;
 }
