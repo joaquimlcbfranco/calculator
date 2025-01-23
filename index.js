@@ -114,22 +114,22 @@ function assignOperator(op) {
 // Fetch equal button
 const submit = document.querySelector('.calculator-submit');
 submit.addEventListener('click', () => {
-    // Only enters condition if submit button is enabled and both numbers are provided
-    if (firstNumber !== undefined && secondNumber !== undefined && secondNumber !== 0 && !submit.disabled) {
-        totalResult = operate(firstNumber, operator, secondNumber);
-        setDisplay(totalResult);
-        firstNumber = totalResult;
-        secondNumber = undefined;
-        operator = '';
-        // Disables submit after clicking the first time
-        submit.disabled = true;
-    }
-    else if (firstNumber !== undefined && secondNumber === 0 && !submit.disabled) {
+    if (firstNumber !== undefined && secondNumber === 0 && !submit.disabled && operator === '/') {
         setDisplay('nice try');
         firstNumber = undefined;
         secondNumber = undefined;
         operator = '';
         totalResult = 0;
+        // Disables submit after clicking the first time
+        submit.disabled = true;
+    }
+    // Only enters condition if submit button is enabled and both numbers are provided
+    else if (firstNumber !== undefined && secondNumber !== undefined && !submit.disabled) {
+        totalResult = operate(firstNumber, operator, secondNumber);
+        setDisplay(totalResult);
+        firstNumber = totalResult;
+        secondNumber = undefined;
+        operator = '';
         // Disables submit after clicking the first time
         submit.disabled = true;
     }
