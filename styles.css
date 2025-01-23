@@ -29,10 +29,22 @@ a:hover {
 
 .content {
     display: flex;
-    flex: 1;        
+    flex: 1;
+    justify-content: center;
+    align-items: center;  
 }
 
+.calculator-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #3c3c3c;
+    height: 490px;
+    width: 375px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
 
+.calculator-display {}
 
 .footer {
     display: flex;
